@@ -1,0 +1,58 @@
+somme = 0;
+
+// Parcourir les éléments de A
+for (i = 0; i < tailleA; i++) {
+    present = false;
+
+    for (j = 0; j < tailleB; j++) {
+        if (A[i] == B[j]) {
+            present = true;
+        }
+    }
+
+    if (present == false) {
+        somme = somme + A[i];
+    }
+}
+
+// Parcourir les éléments de B
+for (i = 0; i < tailleB; i++) {
+    present = false;
+
+    for (j = 0; j < tailleA; j++) {
+        if (B[i] == A[j]) {
+            present = true;
+        }
+    }
+
+    if (present == false) {
+        somme = somme + B[i];
+    }
+}
+Algorithm dot_product_orthogonality
+
+    Read(n)
+
+    Declare v1[n], v2[n]
+    Declare i, sum
+
+    For i from 0 to n - 1 do
+        Read(v1[i])
+    End For
+
+    For i from 0 to n - 1 do
+        Read(v2[i])
+    End For
+
+    sum <- 0
+    For i from 0 to n - 1 do
+        sum <- sum + v1[i] * v2[i]
+    End For
+
+    If sum = 0 Then
+        Write("The vectors are orthogonal.")
+    Else
+        Write("The vectors are not orthogonal.")
+    End If
+
+End Algorithm
